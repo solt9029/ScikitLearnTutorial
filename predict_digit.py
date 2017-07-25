@@ -1,4 +1,3 @@
-import os, sys, math
 from sklearn import datasets, svm 
 from sklearn.externals import joblib
 import numpy as np
@@ -42,6 +41,7 @@ def predict_digit(imagefile):
 
 
 if __name__=='__main__':
+	import os, sys, math
 	if len(sys.argv) <= 1:
 	    print("Please specify the path of the number image you want to predict in this program as second argument.")
 	    exit()
