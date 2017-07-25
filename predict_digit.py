@@ -17,9 +17,9 @@ def predict_digit(imagefile):
     img = np.asarray(image, dtype=float)
     img = np.floor(16 - 16 * (img / 256))
     # 変換された画像を表示する場合はコメントアウトを解除する
-    # plt.imshow(img)
-    # plt.gray()
-    # plt.show()
+    plt.imshow(img)
+    plt.gray()
+    plt.show()
     img = img.flatten()
 
     # モデルが作成されてない場合は作る
