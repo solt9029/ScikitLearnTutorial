@@ -47,5 +47,5 @@ if __name__=='__main__':
 	    exit()
 
 	imagefile=sys.argv[1]
-	digit=predict_digit(imagefile)
-	print("RESULT:",digit)
+	result=predict_digit(imagefile)
+	print("RESULT:",result)

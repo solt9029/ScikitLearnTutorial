@@ -1,10 +1,10 @@
 import predict_digit as pd
 import os, sys, math
 
-if len(sys.argv) <= 1:
-    print("Please specify the path of the number image you want to predict in this program as second argument.")
+if len(sys.argv) <= 2:
+    print("Please specify two paths of the number images you want to plus in this program as second and third arguments.")
     exit()
 
-imagefile=sys.argv[1]
-digit=pd.predict_digit(imagefile)
-print("RESULT:",digit+digit)
+result=pd.predict_digit(sys.argv[1])+pd.predict_digit(sys.argv[2])
+
+print("RESULT:",result)
