@@ -3,6 +3,7 @@ from sklearn.externals import joblib
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
+import os, sys, math
 
 
 
@@ -36,16 +37,15 @@ def predict_digit(imagefile):
 
 	clf = joblib.load(DIGITS_PKL)
 	n = clf.predict([img])
-	return n
+	return n[0]
 
 
 
 if __name__=='__main__':
-	import os, sys, math
 	if len(sys.argv) <= 1:
 	    print("Please specify the path of the number image you want to predict in this program as second argument.")
 	    exit()
 
 	imagefile=sys.argv[1]
 	digit=predict_digit(imagefile)
-	print("RESULT",digit)
+	print("RESULT:",digit)
