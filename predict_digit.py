@@ -44,6 +44,7 @@ def predict_digit(imagefile):
 if __name__=='__main__':
     if len(sys.argv) <= 1:
         print("Please specify the path of the number image you want to predict in this program as second argument.")
+        print("Example: python3 predict_digit.py ./test/test9.png")
         exit()
 
     imagefile=sys.argv[1]
